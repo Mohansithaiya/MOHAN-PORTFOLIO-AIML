@@ -239,8 +239,8 @@ export default function Home() {
 
             <aside className="hero-profile reveal" aria-label="Profile summary">
               <div className="profile-art">
-                <img src="/manus-storage/mohan-hero-ledger_edde92eb.png" alt="Abstract editorial engineering illustration" />
-                <div className="profile-art-label">System sketch / 2026</div>
+                <img className="hero-photo" src="/manus-storage/MOHAN_S_PHOTO_cbbb7d5a.png" alt="Professional headshot of Mohan S" />
+                <div className="profile-art-label">Mohan S / Chennai</div>
               </div>
               <div className="profile-specs">
                 <div>
