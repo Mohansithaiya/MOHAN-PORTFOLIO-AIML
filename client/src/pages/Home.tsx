@@ -424,6 +424,56 @@ export default function Home() {
                     </ol>
                   </div>
 
+                  <figure className="architecture-diagram">
+                    <figcaption>
+                      <span className="mini-label">Technical architecture / current system flow</span>
+                      <p>How citizen requests move through the NAMMANADU application foundation.</p>
+                    </figcaption>
+                    <div className="architecture-flow" aria-label="Citizen to government service workflow layer system flow">
+                      <div className="architecture-node">
+                        <span>01</span>
+                        <strong>Citizen</strong>
+                        <small>Registration, login &amp; civic requests</small>
+                      </div>
+                      <div className="architecture-arrow" aria-hidden="true">→</div>
+                      <div className="architecture-node">
+                        <span>02</span>
+                        <strong>Frontend</strong>
+                        <small>Dashboard &amp; complaint flow</small>
+                      </div>
+                      <div className="architecture-arrow" aria-hidden="true">→</div>
+                      <div className="architecture-node">
+                        <span>03</span>
+                        <strong>Backend / API</strong>
+                        <small>Application integration</small>
+                      </div>
+                      <div className="architecture-arrow" aria-hidden="true">→</div>
+                      <div className="architecture-node">
+                        <span>04</span>
+                        <strong>Authentication</strong>
+                        <small>Citizen access &amp; role foundation</small>
+                      </div>
+                      <div className="architecture-arrow" aria-hidden="true">→</div>
+                      <div className="architecture-node">
+                        <span>05</span>
+                        <strong>Database</strong>
+                        <small>MongoDB integration</small>
+                      </div>
+                      <div className="architecture-arrow" aria-hidden="true">→</div>
+                      <div className="architecture-node">
+                        <span>06</span>
+                        <strong>AI-assisted services</strong>
+                        <small>Civic assistance &amp; scheme exploration</small>
+                      </div>
+                      <div className="architecture-arrow" aria-hidden="true">→</div>
+                      <div className="architecture-node">
+                        <span>07</span>
+                        <strong>Government service / workflow layer</strong>
+                        <small>Role-based application workflows</small>
+                      </div>
+                    </div>
+                  </figure>
+
                   <footer className="project-footer nammanadu-footer">
                     <span>Project status</span>
                     <strong>Ongoing civic technology development</strong>

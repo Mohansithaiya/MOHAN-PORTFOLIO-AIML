@@ -1,0 +1,7 @@
+flowchart LR
+  citizen[Citizen\nRegistration, login & civic requests] --> frontend[Frontend\nDashboard & complaint flow]
+  frontend --> backend[Backend / API\nApplication integration]
+  backend --> authentication[Authentication\nCitizen access & role foundation]
+  authentication --> database[Database\nMongoDB integration]
+  database --> ai[AI-assisted services\nCivic assistance & scheme exploration]
+  ai --> government[Government service / workflow layer\nRole-based application workflows]
