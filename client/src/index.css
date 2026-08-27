@@ -316,12 +316,37 @@ h1 em { color: var(--copper); font-style: italic; }
 .volunteer-description { max-width: 720px; margin: 0; color: var(--ink-soft); font-size: 0.9rem; line-height: 1.6; }
 
 .certifications { background: var(--paper); }
-.certification-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-left: 115px; border-top: 1px solid var(--line-strong); border-left: 1px solid var(--line-strong); }
-.certification-item { display: grid; grid-template-columns: auto 1fr; gap: 0.55rem 0.85rem; min-height: 153px; padding: 1rem; border-right: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); transition: background 180ms var(--ease-out); }
-.certification-item:hover { background: var(--paper-deep); }
-.certification-item > span { color: var(--copper-dark); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; }
-.certification-item > svg { justify-self: end; color: var(--ink-soft); }
-.certification-item strong { grid-column: 1 / -1; align-self: end; max-width: 220px; font-family: "Newsreader", Georgia, serif; font-size: 1.35rem; font-weight: 500; line-height: 1.02; letter-spacing: -0.03em; }
+.certification-controls { display: flex; align-items: end; justify-content: space-between; gap: 1.5rem; margin: -2.8rem 0 1.4rem 115px; padding-top: 1rem; border-top: 1px solid var(--line-strong); }
+.certification-filter-list { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.certification-filter-list button { min-height: 31px; padding: 0.38rem 0.55rem; border: 1px solid var(--line-strong); background: transparent; color: var(--ink-soft); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.065em; transition: background 160ms var(--ease-out), border-color 160ms var(--ease-out), color 160ms var(--ease-out), transform 160ms var(--ease-out); }
+.certification-filter-list button:hover, .certification-filter-list button:focus-visible, .certification-filter-list button.is-active { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+.certification-filter-list button:active, .view-all-certifications:active { transform: scale(0.97); }
+.certification-count { flex: 0 0 auto; margin: 0; color: var(--ink-faint); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.075em; text-align: right; text-transform: uppercase; }
+.certification-showcase { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-left: 115px; border-top: 1px solid var(--line-strong); border-left: 1px solid var(--line-strong); }
+.credential-card { display: flex; min-height: 250px; flex-direction: column; padding: clamp(1.15rem, 2vw, 1.55rem); border-right: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); background: var(--paper); transition: background 180ms var(--ease-out), transform 180ms var(--ease-out); }
+.credential-card:hover { background: var(--paper-deep); transform: translateY(-3px); }
+.credential-card header { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 0.55rem; }
+.credential-number { color: var(--copper-dark); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; }
+.issuer-mark { display: inline-flex; min-width: 34px; height: 24px; align-items: center; justify-content: center; padding: 0 0.3rem; border: 1px solid var(--line-strong); background: var(--paper); color: var(--ink); font-size: 0.56rem; font-weight: 800; letter-spacing: -0.02em; }
+.credential-card header > svg { color: var(--copper); }
+.credential-card h3 { max-width: 450px; margin: clamp(1.3rem, 2.5vw, 2rem) 0 1.4rem; color: var(--ink); font-family: "Newsreader", Georgia, serif; font-size: clamp(1.45rem, 2.1vw, 2.05rem); font-weight: 500; letter-spacing: -0.035em; line-height: 1.02; }
+.credential-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-top: auto; padding-top: 0.85rem; border-top: 1px solid var(--line); }
+.credential-details div { display: grid; gap: 0.3rem; }
+.credential-details span { color: var(--ink-faint); font-size: 0.55rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.credential-details strong { color: var(--ink-soft); font-size: 0.7rem; line-height: 1.4; }
+.credential-card footer { display: flex; align-items: end; justify-content: space-between; gap: 1rem; min-height: 33px; margin-top: 0.9rem; }
+.credential-category { color: var(--copper-dark); font-size: 0.59rem; font-weight: 700; letter-spacing: 0.075em; text-transform: uppercase; }
+.credential-card footer a { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 0.18rem 0.45rem; max-width: 62%; color: var(--ink); text-align: right; }
+.credential-card footer a span { grid-column: 1 / -1; color: var(--ink-faint); font-size: 0.52rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; }
+.credential-card footer a strong { overflow: hidden; color: var(--ink-soft); font-size: 0.66rem; line-height: 1.3; text-overflow: ellipsis; white-space: nowrap; }
+.credential-card footer a svg { color: var(--copper); }
+.certification-empty { display: flex; grid-column: 1 / -1; align-items: center; gap: 0.8rem; min-height: 150px; padding: 1.2rem; border-right: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); color: var(--ink-soft); }
+.certification-empty svg { color: var(--copper); }
+.certification-empty p { margin: 0; font-family: "Newsreader", Georgia, serif; font-size: 1.25rem; }
+.view-all-certifications { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: calc(100% - 115px); margin: 1.15rem 0 0 115px; padding: 0.85rem 0; border: 0; border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); background: transparent; color: var(--ink); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.075em; text-align: left; text-transform: uppercase; transition: color 160ms var(--ease-out), border-color 160ms var(--ease-out), transform 160ms var(--ease-out); }
+.view-all-certifications:hover, .view-all-certifications:focus-visible { border-color: var(--copper-dark); color: var(--copper-dark); }
+.view-all-certifications svg { transition: transform 160ms var(--ease-out); }
+.view-all-certifications[aria-expanded="true"] svg { transform: rotate(180deg); }
 
 .achievements { background: var(--ink); }
 .achievements .section-heading h2 { color: var(--paper); }
@@ -384,8 +409,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper); outlin
   .about-content, .project-stack, .skill-list { padding-left: 0; }
   .experience-record { padding-left: 0; }
   .volunteer-record { padding-left: 0; }
-  .certification-grid, .achievement-list { margin-left: 0; }
-  .certification-grid { grid-template-columns: repeat(2, 1fr); }
+  .certification-controls, .certification-showcase, .view-all-certifications, .achievement-list { margin-left: 0; }
+  .certification-controls { margin-top: -2.8rem; }
+  .certification-showcase { grid-template-columns: repeat(2, 1fr); }
+  .view-all-certifications { width: 100%; }
   .contact-inner { grid-template-columns: 1fr; gap: 2.7rem; }
 }
 
@@ -425,8 +452,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper); outlin
   .experience-role { padding-left: 1.25rem; }
   .volunteer-record { grid-template-columns: 88px minmax(0, 1fr); }
   .volunteer-role { padding-left: 1.25rem; }
-  .certification-grid { grid-template-columns: 1fr 1fr; }
-  .certification-item { min-height: 135px; }
+  .certification-controls { align-items: flex-start; flex-direction: column; gap: 0.8rem; }
+  .certification-count { text-align: left; }
+  .credential-card { min-height: 230px; }
   .achievement-row { grid-template-columns: 1fr auto; gap: 0.55rem 1rem; }
   .achievement-date { grid-column: 1 / -1; }
   .achievement-row > svg { grid-column: 2; grid-row: 2; }
@@ -463,7 +491,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper); outlin
   .experience-role { padding: 1.1rem 0 0; border-top: 1px solid var(--line-strong); border-left: 0; }
   .volunteer-record { grid-template-columns: 1fr; gap: 1rem; }
   .volunteer-role { padding: 1.1rem 0 0; border-top: 1px solid var(--line-strong); border-left: 0; }
-  .certification-grid { grid-template-columns: 1fr; }
+  .certification-showcase { grid-template-columns: 1fr; }
+  .credential-card footer { align-items: flex-start; flex-direction: column; }
+  .credential-card footer a { max-width: 100%; text-align: left; }
+  .credential-card footer a strong { white-space: normal; }
   .contact-primary strong { font-size: 1.4rem; }
 }
 

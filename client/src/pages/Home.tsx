@@ -72,14 +72,156 @@ const skillGroups = [
   },
 ];
 
-const certifications = [
-  "IBM Machine Learning",
-  "Google Data Analytics",
-  "NVIDIA Computer Vision",
-  "DBMS (Colorado)",
-  "Relational Databases (Illinois Tech)",
-  "Cisco Ethical Hacker",
-  "Cyber Threat Management",
+const certificationFilters = ["All", "AI / ML", "Cloud", "Data & Databases", "Software / Web", "Cybersecurity", "Hackathons", "GenAI"] as const;
+
+type CertificationFilter = (typeof certificationFilters)[number];
+
+type CertificationRecord = {
+  title: string;
+  issuer: string;
+  mark: string;
+  issueDate: string | null;
+  category: Exclude<CertificationFilter, "All">;
+  featured: boolean;
+  appliedIn: { label: string; href: string } | null;
+};
+
+const certifications: readonly CertificationRecord[] = [
+  {
+    title: "AWS Academy Graduate – Cloud Foundations",
+    issuer: "AWS",
+    mark: "AWS",
+    issueDate: null,
+    category: "Cloud",
+    featured: true,
+    appliedIn: null,
+  },
+  {
+    title: "Computer Vision for Industrial Inspection",
+    issuer: "NVIDIA",
+    mark: "NV",
+    issueDate: null,
+    category: "AI / ML",
+    featured: true,
+    appliedIn: null,
+  },
+  {
+    title: "IBM Introduction to Machine Learning",
+    issuer: "IBM",
+    mark: "IBM",
+    issueDate: null,
+    category: "AI / ML",
+    featured: true,
+    appliedIn: null,
+  },
+  {
+    title: "Exploratory Data Analysis for Machine Learning",
+    issuer: "IBM",
+    mark: "IBM",
+    issueDate: null,
+    category: "AI / ML",
+    featured: true,
+    appliedIn: null,
+  },
+  {
+    title: "Relational Database Implementation and Applications",
+    issuer: "Illinois Institute of Technology",
+    mark: "IIT",
+    issueDate: null,
+    category: "Data & Databases",
+    featured: true,
+    appliedIn: null,
+  },
+  {
+    title: "Database Management Essentials",
+    issuer: "University of Colorado Boulder",
+    mark: "CU",
+    issueDate: null,
+    category: "Data & Databases",
+    featured: true,
+    appliedIn: null,
+  },
+  {
+    title: "J.P. Morgan – Software Engineering Job Simulation",
+    issuer: "Forage",
+    mark: "JP",
+    issueDate: null,
+    category: "Software / Web",
+    featured: true,
+    appliedIn: null,
+  },
+  {
+    title: "Deloitte Australia – Data Analytics Job Simulation",
+    issuer: "Forage",
+    mark: "DA",
+    issueDate: null,
+    category: "Data & Databases",
+    featured: true,
+    appliedIn: null,
+  },
+  {
+    title: "Google Data Analytics",
+    issuer: "Google",
+    mark: "G",
+    issueDate: null,
+    category: "Data & Databases",
+    featured: false,
+    appliedIn: null,
+  },
+  {
+    title: "Cisco Ethical Hacker",
+    issuer: "Cisco",
+    mark: "CS",
+    issueDate: null,
+    category: "Cybersecurity",
+    featured: false,
+    appliedIn: null,
+  },
+  {
+    title: "Cyber Threat Management",
+    issuer: "Not provided",
+    mark: "CT",
+    issueDate: null,
+    category: "Cybersecurity",
+    featured: false,
+    appliedIn: null,
+  },
+  {
+    title: "IBM Machine Learning",
+    issuer: "IBM",
+    mark: "IBM",
+    issueDate: null,
+    category: "AI / ML",
+    featured: false,
+    appliedIn: null,
+  },
+  {
+    title: "NVIDIA Computer Vision",
+    issuer: "NVIDIA",
+    mark: "NV",
+    issueDate: null,
+    category: "AI / ML",
+    featured: false,
+    appliedIn: null,
+  },
+  {
+    title: "DBMS (Colorado)",
+    issuer: "Not provided",
+    mark: "DB",
+    issueDate: null,
+    category: "Data & Databases",
+    featured: false,
+    appliedIn: null,
+  },
+  {
+    title: "Relational Databases (Illinois Tech)",
+    issuer: "Illinois Tech",
+    mark: "IT",
+    issueDate: null,
+    category: "Data & Databases",
+    featured: false,
+    appliedIn: null,
+  },
 ];
 
 const achievements = [
@@ -133,6 +275,8 @@ function ExternalIcon() {
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeCertificationFilter, setActiveCertificationFilter] = useState<CertificationFilter>("All");
+  const [showAllCertifications, setShowAllCertifications] = useState(false);
 
   useEffect(() => {
     const updateHeader = () => setScrolled(window.scrollY > 18);
@@ -142,6 +286,14 @@ export default function Home() {
   }, []);
 
   const closeMenu = () => setMenuOpen(false);
+  const filteredCertifications = certifications.filter(
+    (certification) => activeCertificationFilter === "All" || certification.category === activeCertificationFilter,
+  );
+  const visibleCertifications =
+    activeCertificationFilter === "All" && !showAllCertifications
+      ? filteredCertifications.filter((certification) => certification.featured)
+      : filteredCertifications;
+  const additionalCertificationCount = certifications.filter((certification) => !certification.featured).length;
 
   return (
     <div className="site-shell">
@@ -546,7 +698,7 @@ export default function Home() {
                 </div>
               </article>
 
-              <article className="project-card project-card-primary">
+              <article id="smart-grocery" className="project-card project-card-primary">
                 <div className="project-card-head">
                   <div>
                     <p className="project-index">PROJECT / 02</p>
@@ -589,7 +741,7 @@ export default function Home() {
                 </div>
               </article>
 
-              <article className="project-card project-card-secondary">
+              <article id="inferchain" className="project-card project-card-secondary">
                 <div className="project-visual">
                   <img src="/manus-storage/mohan-project-inferchain_cf5e622f.png" alt="Abstract diagram representing verifiable AI inference workflows" />
                   <span>Workflow sketch / secure inference</span>
@@ -675,17 +827,80 @@ export default function Home() {
             <SectionHeading
               index="06"
               eyebrow="Certifications"
-              title="Documented learning across data, machine vision, databases, and cyber security."
+              title="Evidence of focused learning across AI, cloud, data, and engineering."
+              description="A curated recruiter-facing selection, organised by the technical disciplines most relevant to my current work."
             />
-            <div className="certification-grid">
-              {certifications.map((certification, index) => (
-                <div className="certification-item" key={certification}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <Award size={19} strokeWidth={1.55} aria-hidden="true" />
-                  <strong>{certification}</strong>
-                </div>
-              ))}
+            <div className="certification-controls" aria-label="Certification filters">
+              <div className="certification-filter-list" role="group" aria-label="Filter certifications by category">
+                {certificationFilters.map((filter) => (
+                  <button
+                    className={activeCertificationFilter === filter ? "is-active" : ""}
+                    type="button"
+                    key={filter}
+                    aria-pressed={activeCertificationFilter === filter}
+                    onClick={() => {
+                      setActiveCertificationFilter(filter);
+                      if (filter !== "All") setShowAllCertifications(true);
+                    }}
+                  >
+                    {filter}
+                  </button>
+                ))}
+              </div>
+              <p className="certification-count" aria-live="polite">
+                Showing {visibleCertifications.length} of {certifications.length} documented credentials
+              </p>
             </div>
+
+            <div className="certification-showcase" aria-label="Certification showcase">
+              {visibleCertifications.map((certification, index) => (
+                <article className="credential-card" key={certification.title}>
+                  <header>
+                    <span className="credential-number">{String(index + 1).padStart(2, "0")}</span>
+                    <span className="issuer-mark" aria-hidden="true">{certification.mark}</span>
+                    <Award size={18} strokeWidth={1.55} aria-hidden="true" />
+                  </header>
+                  <h3>{certification.title}</h3>
+                  <div className="credential-details">
+                    <div>
+                      <span>Issuer</span>
+                      <strong>{certification.issuer}</strong>
+                    </div>
+                    <div>
+                      <span>Issue date</span>
+                      <strong>{certification.issueDate ?? "Not provided"}</strong>
+                    </div>
+                  </div>
+                  <footer>
+                    <span className="credential-category">{certification.category}</span>
+                    {certification.appliedIn && (
+                      <a href={certification.appliedIn.href}>
+                        <span>Applied in projects</span>
+                        <strong>{certification.appliedIn.label}</strong>
+                        <ArrowDownRight size={15} aria-hidden="true" />
+                      </a>
+                    )}
+                  </footer>
+                </article>
+              ))}
+              {visibleCertifications.length === 0 && (
+                <div className="certification-empty">
+                  <Award size={21} strokeWidth={1.5} aria-hidden="true" />
+                  <p>No documented credentials are available in this category.</p>
+                </div>
+              )}
+            </div>
+            {activeCertificationFilter === "All" && additionalCertificationCount > 0 && (
+              <button
+                className="view-all-certifications"
+                type="button"
+                onClick={() => setShowAllCertifications((current) => !current)}
+                aria-expanded={showAllCertifications}
+              >
+                <span>{showAllCertifications ? "Show featured certifications" : `View All Certifications · ${additionalCertificationCount} additional records`}</span>
+                <ChevronDown size={17} aria-hidden="true" />
+              </button>
+            )}
           </div>
         </section>
 
