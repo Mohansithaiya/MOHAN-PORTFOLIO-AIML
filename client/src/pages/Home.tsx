@@ -25,7 +25,7 @@ import {
   X,
 } from "lucide-react";
 
-const resumeUrl = "/manus-storage/Mohan_S_Resume_852b2593.pdf";
+const resumeUrl = "/MOHAN_RESUME_AIML.pdf";
 
 const navItems = [
   ["Home", "#home"],
