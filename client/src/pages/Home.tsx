@@ -8,14 +8,12 @@ import {
   ArrowUpRight,
   Award,
   BookOpen,
-  BriefcaseBusiness,
   Check,
   ChevronDown,
   Code2,
   Database,
   ExternalLink,
   Github,
-  GraduationCap,
   Layers3,
   Linkedin,
   Mail,
@@ -217,11 +215,11 @@ export default function Home() {
                 I&apos;m <strong>Mohan S</strong>, a B.Tech Artificial Intelligence and Machine Learning student with a hands-on foundation in software development, data, cloud fundamentals, and security.
               </p>
               <div className="hero-actions">
-                <a className="button button-primary" href="#projects">
-                  <span>View selected work</span>
+                <a className="button button-primary" href="#projects" aria-label="View NAMMANADU, the featured project">
+                  <span>View featured project</span>
                   <ArrowDownRight size={17} aria-hidden="true" />
                 </a>
-                <a className="button button-secondary" href={resumeUrl} target="_blank" rel="noreferrer">
+                <a className="button button-secondary" href={resumeUrl} download="Mohan_S_Resume.pdf">
                   <span>Download résumé</span>
                   <ExternalIcon />
                 </a>
@@ -353,12 +351,21 @@ export default function Home() {
                       <p className="project-index">PROJECT / 01 · MAJOR ONGOING WORK</p>
                       <h3>NAMMANADU</h3>
                     </div>
-                    <span className="project-type project-type-active">Active development</span>
+                    <span className="project-type project-type-active">Ongoing · active development</span>
                   </div>
                   <p className="nammanadu-lead">AI-powered civic assistance and digital governance platform.</p>
                   <p className="project-summary">
                     NAMMANADU is focused on helping citizens access public services, report civic issues, submit complaints, track complaint resolution, explore government schemes, and interact with role-based government workflows. It is an ongoing project under active development, not a completed production government platform.
                   </p>
+
+                  <div className="nammanadu-actions" aria-label="NAMMANADU project links">
+                    <a className="project-link-primary" href="https://github.com/Mohansithaiya/NAMMANADU-Platform" target="_blank" rel="noreferrer">
+                      <Github size={16} aria-hidden="true" /> View source on GitHub <ExternalIcon />
+                    </a>
+                    <a className="project-link-secondary" href="https://drive.google.com/file/d/1A7ZN4pO02bmKIiHWnH4Qnq63GvULh1SK/view?usp=sharing" target="_blank" rel="noreferrer">
+                      Watch 2-minute demo <ExternalIcon />
+                    </a>
+                  </div>
 
                   <div className="nammanadu-detail-grid">
                     <div className="nammanadu-capabilities">
@@ -394,15 +401,8 @@ export default function Home() {
                   </div>
 
                   <footer className="project-footer nammanadu-footer">
-                    <span>Ongoing civic technology project</span>
-                    <div className="project-links">
-                      <a href="https://github.com/Mohansithaiya/NAMMANADU-Platform" target="_blank" rel="noreferrer">
-                        <Github size={15} aria-hidden="true" /> GitHub <ExternalIcon />
-                      </a>
-                      <a href="https://drive.google.com/file/d/1A7ZN4pO02bmKIiHWnH4Qnq63GvULh1SK/view?usp=sharing" target="_blank" rel="noreferrer">
-                        Demo <ExternalIcon />
-                      </a>
-                    </div>
+                    <span>Project status</span>
+                    <strong>Ongoing civic technology development</strong>
                   </footer>
                 </div>
               </article>
@@ -438,7 +438,7 @@ export default function Home() {
                   </div>
                 </div>
                 <footer className="project-footer">
-                  <span>Case study details can be expanded here as the project develops.</span>
+                  <span>Scope: OCR, data preparation, and expiry-alert workflow</span>
                   <ArrowDownRight size={18} aria-hidden="true" />
                 </footer>
               </article>
@@ -464,7 +464,7 @@ export default function Home() {
                     <span><Check size={14} aria-hidden="true" /> Workflow automation and validation for AI inference requests</span>
                   </div>
                   <div className="project-footer">
-                    <span>Expandable project record</span>
+                    <span>Scope: verification, automation, and inference traceability</span>
                     <ArrowDownRight size={18} aria-hidden="true" />
                   </div>
                 </div>

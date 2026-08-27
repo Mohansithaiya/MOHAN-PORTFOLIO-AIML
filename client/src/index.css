@@ -204,6 +204,13 @@ h1 em { color: var(--copper); font-style: italic; }
 .project-type-active { border-color: rgba(230, 170, 143, 0.65); color: #fee3d3; }
 .nammanadu-lead { margin: clamp(2rem, 4vw, 3.8rem) 0 0.65rem; color: var(--paper); font-family: "Newsreader", Georgia, serif; font-size: clamp(1.45rem, 2.6vw, 2.25rem); font-weight: 500; letter-spacing: -0.032em; line-height: 1.04; }
 .project-card-nammanadu .project-summary { max-width: 800px; color: #c6d0d5; }
+.nammanadu-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.35rem; }
+.nammanadu-actions a { display: inline-flex; align-items: center; justify-content: center; gap: 0.48rem; min-height: 42px; padding: 0.62rem 0.8rem; border: 1px solid rgba(247, 244, 237, 0.55); font-size: 0.69rem; font-weight: 700; letter-spacing: 0.025em; transition: background 160ms var(--ease-out), border-color 160ms var(--ease-out), color 160ms var(--ease-out), transform 160ms var(--ease-out); }
+.nammanadu-actions a:active { transform: scale(0.97); }
+.project-link-primary { border-color: #e6aa8f !important; background: #e6aa8f; color: var(--ink); }
+.project-link-primary:hover, .project-link-primary:focus-visible { border-color: #f1c7b3 !important; background: #f1c7b3; }
+.project-link-secondary { color: var(--paper); }
+.project-link-secondary:hover, .project-link-secondary:focus-visible { border-color: var(--paper); background: rgba(247, 244, 237, 0.12); }
 .nammanadu-detail-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 0.34fr); gap: clamp(1.35rem, 4vw, 4.5rem); margin-top: 1.8rem; padding-top: 1rem; border-top: 1px solid rgba(247, 244, 237, 0.23); }
 .mini-label { margin: 0 0 0.65rem; color: #e6aa8f; font-size: 0.57rem; font-weight: 700; letter-spacing: 0.115em; text-transform: uppercase; }
 .capability-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
@@ -216,6 +223,7 @@ h1 em { color: var(--copper); font-style: italic; }
 .citizen-workflow li { display: inline-flex; align-items: center; color: #edf0ed; font-size: 0.7rem; font-weight: 600; }
 .citizen-workflow li:not(:last-child)::after { margin: 0 0.55rem; color: #e6aa8f; content: "→"; }
 .nammanadu-footer { border-color: rgba(247, 244, 237, 0.23); color: #c6d0d5; }
+.nammanadu-footer strong { color: var(--paper); font-size: 0.68rem; letter-spacing: 0.04em; text-align: right; }
 .project-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.85rem; }
 .project-links a { display: inline-flex; align-items: center; gap: 0.34rem; color: var(--paper); transition: color 160ms var(--ease-out); }
 .project-links a:hover, .project-links a:focus-visible { color: #e6aa8f; }
@@ -396,6 +404,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper); outlin
   .detail-row { grid-template-columns: 1fr; gap: 0.35rem; }
   .project-card-head { align-items: flex-start; flex-direction: column; gap: 0.75rem; }
   .project-type { order: -1; }
+  .nammanadu-actions { display: grid; grid-template-columns: 1fr; }
+  .nammanadu-actions a { width: 100%; }
+  .nammanadu-footer { align-items: flex-start; flex-direction: column; }
+  .nammanadu-footer strong { text-align: left; }
   .experience-record { grid-template-columns: 1fr; gap: 1rem; }
   .experience-role { padding: 1.1rem 0 0; border-top: 1px solid var(--line-strong); border-left: 0; }
   .volunteer-record { grid-template-columns: 1fr; gap: 1rem; }
