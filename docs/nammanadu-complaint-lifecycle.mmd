@@ -1,0 +1,8 @@
+flowchart TD
+  create[Create Complaint] --> details[Add Details]
+  details --> submit[Submit]
+  submit --> recorded[Complaint Recorded]
+  recorded --> tracking[Status Tracking]
+  tracking --> workflow[Government / Role-Based Workflow]
+  workflow --> update[Resolution / Status Update]
+  update --> citizen[Citizen Views Updated Status]

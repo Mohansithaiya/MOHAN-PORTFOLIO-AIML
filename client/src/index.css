@@ -243,6 +243,20 @@ h1 em { color: var(--copper); font-style: italic; }
 .architecture-node strong { color: var(--paper); font-family: "Newsreader", Georgia, serif; font-size: clamp(0.95rem, 1.3vw, 1.18rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1.02; overflow-wrap: anywhere; }
 .architecture-node small { color: #c6d0d5; font-size: 0.6rem; line-height: 1.35; text-align: right; }
 .architecture-arrow { display: flex; flex: 0 0 14px; height: 14px; align-items: center; justify-content: center; color: #e6aa8f; font-size: 1rem; line-height: 1; transform: rotate(90deg); }
+.complaint-lifecycle { margin: 1.35rem 0 0; padding: 1rem; border: 1px solid #e6aa8f; background: var(--paper); color: var(--ink); }
+.complaint-lifecycle figcaption { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 0.9rem; padding-bottom: 0.85rem; border-bottom: 1px solid var(--line-strong); }
+.complaint-lifecycle .mini-label { margin: 0; color: var(--copper-dark); }
+.complaint-lifecycle figcaption p { max-width: 390px; margin: 0; color: var(--ink-soft); font-size: 0.69rem; line-height: 1.4; text-align: right; }
+.complaint-lifecycle-flow { display: grid; gap: 0; padding: 0; margin: 0; list-style: none; }
+.complaint-lifecycle-flow li { position: relative; display: grid; grid-template-columns: 42px minmax(0, 0.76fr) minmax(0, 1.24fr); align-items: center; gap: 0.7rem; min-height: 58px; padding: 0.55rem 0; border-bottom: 1px solid var(--line); }
+.complaint-lifecycle-flow li:last-child { border-bottom: 0; }
+.complaint-lifecycle-flow li::after { position: absolute; bottom: -9px; left: 15px; z-index: 1; width: 1px; height: 17px; background: var(--copper); content: ""; }
+.complaint-lifecycle-flow li::before { position: absolute; bottom: -10px; left: 11px; z-index: 2; color: var(--copper); font-size: 0.7rem; line-height: 1; content: "↓"; }
+.complaint-lifecycle-flow li:last-child::after, .complaint-lifecycle-flow li:last-child::before { display: none; }
+.complaint-lifecycle-flow > li > span { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 1px solid var(--copper); color: var(--copper-dark); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.08em; }
+.complaint-lifecycle-flow li div { display: contents; }
+.complaint-lifecycle-flow strong { color: var(--ink); font-family: "Newsreader", Georgia, serif; font-size: clamp(1rem, 1.45vw, 1.25rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1.02; }
+.complaint-lifecycle-flow small { color: var(--ink-soft); font-size: 0.65rem; line-height: 1.4; }
 .nammanadu-footer { border-color: rgba(247, 244, 237, 0.23); color: #c6d0d5; }
 .nammanadu-footer strong { color: var(--paper); font-size: 0.68rem; letter-spacing: 0.04em; text-align: right; }
 .project-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.85rem; }
@@ -399,6 +413,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper); outlin
   .nammanadu-detail-grid { grid-template-columns: 1fr; gap: 1.25rem; }
   .nammanadu-system { padding-top: 1.1rem; padding-left: 0; border-top: 1px solid rgba(247, 244, 237, 0.23); border-left: 0; }
   .architecture-node { grid-template-columns: 28px minmax(0, 0.7fr) minmax(0, 1fr); gap: 0.5rem; padding: 0.6rem; }
+  .complaint-lifecycle-flow li { grid-template-columns: 38px minmax(0, 0.75fr) minmax(0, 1.25fr); gap: 0.55rem; }
   .project-visual { min-height: auto; }
   .project-visual::after { border-right: 0; border-bottom: 1px solid var(--line-strong); }
   .project-visual img { min-height: 240px; }
@@ -434,6 +449,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper); outlin
   .architecture-diagram figcaption p { max-width: none; text-align: left; }
   .architecture-node { grid-template-columns: 24px 1fr; }
   .architecture-node small { grid-column: 2; text-align: left; }
+  .complaint-lifecycle figcaption { align-items: flex-start; flex-direction: column; gap: 0.4rem; }
+  .complaint-lifecycle figcaption p { max-width: none; text-align: left; }
+  .complaint-lifecycle-flow li { grid-template-columns: 38px 1fr; align-items: start; gap: 0.25rem 0.55rem; min-height: 0; padding: 0.7rem 0; }
+  .complaint-lifecycle-flow strong { padding-top: 0.12rem; }
+  .complaint-lifecycle-flow small { grid-column: 2; }
   .experience-record { grid-template-columns: 1fr; gap: 1rem; }
   .experience-role { padding: 1.1rem 0 0; border-top: 1px solid var(--line-strong); border-left: 0; }
   .volunteer-record { grid-template-columns: 1fr; gap: 1rem; }

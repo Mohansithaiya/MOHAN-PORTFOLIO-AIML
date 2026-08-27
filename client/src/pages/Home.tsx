@@ -474,6 +474,71 @@ export default function Home() {
                     </div>
                   </figure>
 
+                  <figure className="complaint-lifecycle">
+                    <figcaption>
+                      <span className="mini-label">Complaint lifecycle / current user workflow</span>
+                      <p>From citizen complaint creation to the updated status shown in the application.</p>
+                    </figcaption>
+                    <ol className="complaint-lifecycle-flow" aria-label="NAMMANADU complaint lifecycle">
+                      <li>
+                        <span>01</span>
+                        <div>
+                          <strong>Create complaint</strong>
+                          <small>Citizen begins a civic complaint.</small>
+                        </div>
+                      </li>
+                      <li>
+                        <span>02</span>
+                        <div>
+                          <strong>Add details</strong>
+                          <small>Category, priority, district, constituency, and evidence/image support.</small>
+                        </div>
+                      </li>
+                      <li>
+                        <span>03</span>
+                        <div>
+                          <strong>Submit</strong>
+                          <small>Citizen submits the completed complaint.</small>
+                        </div>
+                      </li>
+                      <li>
+                        <span>04</span>
+                        <div>
+                          <strong>Complaint recorded</strong>
+                          <small>The submitted complaint is recorded in the current application.</small>
+                        </div>
+                      </li>
+                      <li>
+                        <span>05</span>
+                        <div>
+                          <strong>Status tracking</strong>
+                          <small>Citizen tracks the complaint and its current status.</small>
+                        </div>
+                      </li>
+                      <li>
+                        <span>06</span>
+                        <div>
+                          <strong>Government / role-based workflow</strong>
+                          <small>Role-based application workflows support complaint handling.</small>
+                        </div>
+                      </li>
+                      <li>
+                        <span>07</span>
+                        <div>
+                          <strong>Resolution / status update</strong>
+                          <small>Complaint status management updates the recorded status.</small>
+                        </div>
+                      </li>
+                      <li>
+                        <span>08</span>
+                        <div>
+                          <strong>Citizen views updated status</strong>
+                          <small>Updated complaint status is visible through tracking.</small>
+                        </div>
+                      </li>
+                    </ol>
+                  </figure>
+
                   <footer className="project-footer nammanadu-footer">
                     <span>Project status</span>
                     <strong>Ongoing civic technology development</strong>
