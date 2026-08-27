@@ -580,6 +580,13 @@ export default function Home() {
                   <span>Scope: OCR, data preparation, and expiry-alert workflow</span>
                   <ArrowDownRight size={18} aria-hidden="true" />
                 </footer>
+                <div className="project-source-actions">
+                  <a className="project-source-link" href="https://github.com/Mohansithaiya/Smart-Grocery-Expiry-Prediction-and-Alert-System" target="_blank" rel="noreferrer">
+                    <Github size={16} aria-hidden="true" />
+                    <span>View source on GitHub</span>
+                    <ExternalIcon />
+                  </a>
+                </div>
               </article>
 
               <article className="project-card project-card-secondary">
@@ -605,6 +612,13 @@ export default function Home() {
                   <div className="project-footer">
                     <span>Scope: verification, automation, and inference traceability</span>
                     <ArrowDownRight size={18} aria-hidden="true" />
+                  </div>
+                  <div className="project-source-actions">
+                    <a className="project-source-link" href="https://github.com/Mohansithaiya/inferchain" target="_blank" rel="noreferrer">
+                      <Github size={16} aria-hidden="true" />
+                      <span>View source on GitHub</span>
+                      <ExternalIcon />
+                    </a>
                   </div>
                 </div>
               </article>
