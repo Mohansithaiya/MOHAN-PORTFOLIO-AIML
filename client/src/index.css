@@ -175,7 +175,7 @@ h1 em { color: var(--copper); font-style: italic; }
 .detail-row strong { font-size: 0.75rem; line-height: 1.45; }
 
 .skills { position: relative; overflow: hidden; background: var(--ink); color: var(--paper); }
-.technical-pattern { position: absolute; inset: 0; opacity: 0.19; background: url("/manus-storage/mohan-technical-pattern_2bc05546.png") center / cover no-repeat; mix-blend-mode: screen; }
+.technical-pattern { position: absolute; inset: 0; opacity: 0.19; background: url("/mohan-technical-pattern.png") center / cover no-repeat; mix-blend-mode: screen; }
 .skills .content-frame { position: relative; z-index: 1; }
 .skills .section-heading h2 { color: var(--paper); }
 .skills .section-heading .eyebrow { color: #e6aa8f; }

@@ -304,7 +304,7 @@ export default function Home() {
       <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
         <div className="header-inner">
           <a className="brand" href="#home" aria-label="Mohan S home" onClick={closeMenu}>
-            <img src="/manus-storage/mohan-ms-mark_77f6fd8d.png" alt="Mohan S monogram" />
+            <img src="/mohan-ms-mark.png" alt="Mohan S monogram" />
             <span>
               <strong>Mohan S</strong>
               <small>Engineering portfolio</small>
@@ -391,7 +391,7 @@ export default function Home() {
 
             <aside className="hero-profile reveal" aria-label="Profile summary">
               <div className="profile-art">
-                <img className="hero-photo" src="/manus-storage/MOHAN_S_PHOTO_cbbb7d5a.png" alt="Professional headshot of Mohan S" />
+                <img className="hero-photo" src="/MOHAN_S_PHOTO.png" alt="Professional headshot of Mohan S" />
                 <div className="profile-art-label">Mohan S / Chennai</div>
               </div>
               <div className="profile-specs">
@@ -493,7 +493,7 @@ export default function Home() {
               <article className="project-card project-card-nammanadu">
                 <div className="nammanadu-preview">
                   <p className="preview-label">Project preview</p>
-                  <img src="/manus-storage/nammanadu-tamilnadu-glow_3f0522c9.png" alt="Tamil Nadu outline from the NAMMANADU project" />
+                  <img src="/nammanadu-tamilnadu-glow.png" alt="Tamil Nadu outline from the NAMMANADU project" />
                   <div className="preview-caption">
                     <span>Tamil Nadu</span>
                     <strong>Civic assistance</strong>
@@ -743,7 +743,7 @@ export default function Home() {
 
               <article id="inferchain" className="project-card project-card-secondary">
                 <div className="project-visual">
-                  <img src="/manus-storage/mohan-project-inferchain_cf5e622f.png" alt="Abstract diagram representing verifiable AI inference workflows" />
+                  <img src="/mohan-project-inferchain.png" alt="Abstract diagram representing verifiable AI inference workflows" />
                   <span>Workflow sketch / secure inference</span>
                 </div>
                 <div className="project-secondary-content">
@@ -969,7 +969,7 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="footer-brand">
-          <img src="/manus-storage/mohan-ms-mark_77f6fd8d.png" alt="" />
+          <img src="/mohan-ms-mark.png" alt="" />
           <span>Mohan S</span>
         </div>
         <p>AI/ML · Software Development · Full-Stack · Cloud</p>
