@@ -339,24 +339,37 @@ export default function Home() {
             />
             <div className="project-stack">
               <article className="project-card project-card-nammanadu">
-                <div className="nammanadu-signal" aria-hidden="true">
-                  <span>NM</span>
-                  <i />
-                  <i />
-                  <i />
+                <div className="nammanadu-preview">
+                  <p className="preview-label">Project preview</p>
+                  <img src="/manus-storage/nammanadu-tamilnadu-glow_3f0522c9.png" alt="Tamil Nadu outline from the NAMMANADU project" />
+                  <div className="preview-caption">
+                    <span>Tamil Nadu</span>
+                    <strong>Civic assistance</strong>
+                  </div>
                 </div>
                 <div className="nammanadu-content">
                   <div className="project-card-head">
                     <div>
-                      <p className="project-index">PROJECT / 01 · MAJOR ONGOING WORK</p>
+                      <p className="project-index">FLAGSHIP PROJECT / 01 · CURRENT FULL-STACK WORK</p>
                       <h3>NAMMANADU</h3>
                     </div>
                     <span className="project-type project-type-active">Ongoing · active development</span>
                   </div>
-                  <p className="nammanadu-lead">AI-powered civic assistance and digital governance platform.</p>
+                  <p className="nammanadu-lead">AI-powered civic assistance platform for Tamil Nadu citizens.</p>
                   <p className="project-summary">
                     NAMMANADU is focused on helping citizens access public services, report civic issues, submit complaints, track complaint resolution, explore government schemes, and interact with role-based government workflows. It is an ongoing project under active development, not a completed production government platform.
                   </p>
+
+                  <div className="nammanadu-role" aria-label="Project role and type">
+                    <div>
+                      <span>Role</span>
+                      <strong>Developer</strong>
+                    </div>
+                    <div>
+                      <span>Project type</span>
+                      <strong>Full-stack civic assistance platform</strong>
+                    </div>
+                  </div>
 
                   <div className="nammanadu-actions" aria-label="NAMMANADU project links">
                     <a className="project-link-primary" href="https://github.com/Mohansithaiya/NAMMANADU-Platform" target="_blank" rel="noreferrer">
@@ -369,7 +382,7 @@ export default function Home() {
 
                   <div className="nammanadu-detail-grid">
                     <div className="nammanadu-capabilities">
-                      <p className="mini-label">Current working application</p>
+                      <p className="mini-label">Key features</p>
                       <div className="capability-tags">
                         <span>Citizen registration &amp; login</span>
                         <span>Citizen dashboard</span>
@@ -382,8 +395,19 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="nammanadu-system">
-                      <p className="mini-label">Application foundation</p>
+                      <p className="mini-label">Implementation foundation</p>
                       <p>Backend API integration · MongoDB database integration · Role-based application foundation</p>
+                    </div>
+                  </div>
+
+                  <div className="nammanadu-tech">
+                    <p className="mini-label">Technologies used</p>
+                    <div>
+                      <span>JavaScript</span>
+                      <span>HTML</span>
+                      <span>CSS</span>
+                      <span>MongoDB</span>
+                      <span>Backend API integration</span>
                     </div>
                   </div>
 

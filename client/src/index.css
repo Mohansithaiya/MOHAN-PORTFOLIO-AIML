@@ -192,19 +192,25 @@ h1 em { color: var(--copper); font-style: italic; }
 .project-card { border: 1px solid var(--line-strong); background: var(--paper); transition: transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out); }
 .project-card:hover { transform: translateY(-4px); box-shadow: 7px 7px 0 var(--paper-ink); }
 .project-card-primary { padding: clamp(1.35rem, 3vw, 2.3rem); }
-.project-card-nammanadu { position: relative; display: grid; grid-template-columns: minmax(110px, 0.18fr) minmax(0, 1fr); overflow: hidden; border-color: var(--ink); background: var(--ink); color: var(--paper); box-shadow: 10px 10px 0 var(--copper); }
+.project-card-nammanadu { position: relative; display: grid; grid-template-columns: minmax(185px, 0.3fr) minmax(0, 1fr); overflow: hidden; border-color: var(--ink); background: var(--ink); color: var(--paper); box-shadow: 10px 10px 0 var(--copper); }
 .project-card-nammanadu:hover { box-shadow: 14px 14px 0 var(--copper); }
-.nammanadu-signal { display: flex; position: relative; flex-direction: column; justify-content: space-between; min-height: 100%; padding: 1.15rem; overflow: hidden; border-right: 1px solid rgba(247, 244, 237, 0.26); background: #0e1b2b; }
-.nammanadu-signal::before { position: absolute; top: -16%; left: 47%; width: 1px; height: 132%; background: rgba(247, 244, 237, 0.2); content: ""; transform: rotate(26deg); }
-.nammanadu-signal span { position: relative; z-index: 1; color: #e6aa8f; font-family: "Newsreader", Georgia, serif; font-size: clamp(2rem, 3vw, 3.45rem); font-weight: 500; letter-spacing: -0.08em; }
-.nammanadu-signal i { position: relative; z-index: 1; width: 8px; height: 8px; margin-left: auto; border: 1px solid #e6aa8f; border-radius: 50%; }
-.nammanadu-signal i:nth-of-type(2) { margin-right: auto; margin-left: 0; background: #e6aa8f; }
+.nammanadu-preview { display: flex; position: relative; flex-direction: column; align-items: center; justify-content: space-between; min-height: 100%; padding: 1.15rem; overflow: hidden; border-right: 1px solid rgba(247, 244, 237, 0.26); background: #0e1b2b; }
+.nammanadu-preview::before { position: absolute; inset: 0; background-image: linear-gradient(rgba(230, 170, 143, 0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(230, 170, 143, 0.12) 1px, transparent 1px); background-size: 24px 24px; content: ""; opacity: 0.35; }
+.preview-label { position: relative; z-index: 1; align-self: stretch; margin: 0; color: #e6aa8f; font-size: 0.56rem; font-weight: 700; letter-spacing: 0.115em; text-transform: uppercase; }
+.nammanadu-preview img { position: relative; z-index: 1; width: min(100%, 210px); height: auto; margin: 1.6rem 0; object-fit: contain; filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.26)); }
+.preview-caption { position: relative; z-index: 1; display: grid; align-self: stretch; gap: 0.32rem; padding-top: 0.85rem; border-top: 1px solid rgba(247, 244, 237, 0.26); }
+.preview-caption span { color: #e6aa8f; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; }
+.preview-caption strong { color: var(--paper); font-family: "Newsreader", Georgia, serif; font-size: 1.25rem; font-weight: 500; letter-spacing: -0.025em; }
 .nammanadu-content { padding: clamp(1.35rem, 3vw, 2.3rem); }
 .project-card-nammanadu h3 { color: var(--paper); font-size: clamp(2.2rem, 4.8vw, 4.75rem); }
 .project-card-nammanadu .project-index { color: #e6aa8f; }
 .project-type-active { border-color: rgba(230, 170, 143, 0.65); color: #fee3d3; }
 .nammanadu-lead { margin: clamp(2rem, 4vw, 3.8rem) 0 0.65rem; color: var(--paper); font-family: "Newsreader", Georgia, serif; font-size: clamp(1.45rem, 2.6vw, 2.25rem); font-weight: 500; letter-spacing: -0.032em; line-height: 1.04; }
 .project-card-nammanadu .project-summary { max-width: 800px; color: #c6d0d5; }
+.nammanadu-role { display: flex; flex-wrap: wrap; gap: 0.75rem 1.65rem; margin-top: 1.15rem; padding: 0.75rem 0; border-top: 1px solid rgba(247, 244, 237, 0.23); border-bottom: 1px solid rgba(247, 244, 237, 0.23); }
+.nammanadu-role div { display: grid; gap: 0.26rem; }
+.nammanadu-role span { color: #e6aa8f; font-size: 0.55rem; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; }
+.nammanadu-role strong { color: var(--paper); font-size: 0.72rem; line-height: 1.4; }
 .nammanadu-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.35rem; }
 .nammanadu-actions a { display: inline-flex; align-items: center; justify-content: center; gap: 0.48rem; min-height: 42px; padding: 0.62rem 0.8rem; border: 1px solid rgba(247, 244, 237, 0.55); font-size: 0.69rem; font-weight: 700; letter-spacing: 0.025em; transition: background 160ms var(--ease-out), border-color 160ms var(--ease-out), color 160ms var(--ease-out), transform 160ms var(--ease-out); }
 .nammanadu-actions a:active { transform: scale(0.97); }
@@ -218,6 +224,10 @@ h1 em { color: var(--copper); font-style: italic; }
 .capability-tags span { padding: 0.4rem 0.5rem; border: 1px solid rgba(247, 244, 237, 0.26); color: #edf0ed; font-size: 0.69rem; line-height: 1.25; }
 .nammanadu-system { padding-left: 1.1rem; border-left: 1px solid rgba(247, 244, 237, 0.23); }
 .nammanadu-system p:last-child { margin: 0; color: #edf0ed; font-size: 0.76rem; font-weight: 600; line-height: 1.55; }
+.nammanadu-tech { margin-top: 1.35rem; padding: 1rem; border: 1px solid rgba(247, 244, 237, 0.22); background: rgba(247, 244, 237, 0.045); }
+.nammanadu-tech .mini-label { margin-bottom: 0.7rem; }
+.nammanadu-tech > div { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.nammanadu-tech span { padding: 0.38rem 0.5rem; border: 1px solid rgba(247, 244, 237, 0.26); color: #edf0ed; font-size: 0.68rem; line-height: 1.25; }
 .citizen-workflow { margin-top: 1.8rem; padding: 1rem; border: 1px solid rgba(247, 244, 237, 0.22); background: rgba(247, 244, 237, 0.045); }
 .citizen-workflow .mini-label { margin-bottom: 0.75rem; }
 .citizen-workflow ol { display: flex; flex-wrap: wrap; gap: 0.55rem 0; padding: 0; margin: 0; list-style: none; counter-reset: workflow; }
@@ -373,9 +383,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper); outlin
   .project-grid { grid-template-columns: 1fr; }
   .project-card-secondary { grid-template-columns: 1fr; }
   .project-card-nammanadu { grid-template-columns: 1fr; }
-  .nammanadu-signal { display: grid; grid-template-columns: auto repeat(3, 1fr); align-items: center; min-height: 68px; padding: 0.75rem 1rem; border-right: 0; border-bottom: 1px solid rgba(247, 244, 237, 0.26); }
-  .nammanadu-signal::before { top: -145%; left: 46%; height: 400%; }
-  .nammanadu-signal i { justify-self: end; margin: 0 !important; }
+  .nammanadu-preview { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; min-height: 118px; padding: 0.75rem 1rem; border-right: 0; border-bottom: 1px solid rgba(247, 244, 237, 0.26); }
+  .nammanadu-preview img { width: 88px; margin: 0; }
+  .preview-caption { align-self: center; padding: 0 0 0 0.85rem; border-top: 0; border-left: 1px solid rgba(247, 244, 237, 0.26); }
   .nammanadu-detail-grid { grid-template-columns: 1fr; gap: 1.25rem; }
   .nammanadu-system { padding-top: 1.1rem; padding-left: 0; border-top: 1px solid rgba(247, 244, 237, 0.23); border-left: 0; }
   .project-visual { min-height: auto; }
