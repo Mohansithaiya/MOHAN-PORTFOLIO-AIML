@@ -155,7 +155,7 @@ h1 em { color: var(--copper); font-style: italic; }
 @keyframes nudge-down { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
 
 .content-frame { width: min(100% - 48px, 1220px); margin: auto; }
-.about, .skills, .projects, .experience, .certifications, .achievements { padding: clamp(5rem, 10vw, 9rem) 0; border-top: 1px solid var(--line); }
+.about, .skills, .projects, .experience, .volunteering, .certifications, .achievements { padding: clamp(5rem, 10vw, 9rem) 0; border-top: 1px solid var(--line); }
 .section-heading { display: grid; grid-template-columns: 115px minmax(0, 1fr); gap: 2rem; margin-bottom: clamp(2.8rem, 6vw, 5.7rem); }
 .section-index { display: flex; align-items: center; gap: 0.65rem; padding-top: 0.35rem; color: var(--copper-dark); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; }
 .section-index i { flex: 1; max-width: 50px; border-top: 1px solid currentColor; opacity: 0.7; }
@@ -191,6 +191,34 @@ h1 em { color: var(--copper); font-style: italic; }
 .project-card { border: 1px solid var(--line-strong); background: var(--paper); transition: transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out); }
 .project-card:hover { transform: translateY(-4px); box-shadow: 7px 7px 0 var(--paper-ink); }
 .project-card-primary { padding: clamp(1.35rem, 3vw, 2.3rem); }
+.project-card-nammanadu { position: relative; display: grid; grid-template-columns: minmax(110px, 0.18fr) minmax(0, 1fr); overflow: hidden; border-color: var(--ink); background: var(--ink); color: var(--paper); box-shadow: 10px 10px 0 var(--copper); }
+.project-card-nammanadu:hover { box-shadow: 14px 14px 0 var(--copper); }
+.nammanadu-signal { display: flex; position: relative; flex-direction: column; justify-content: space-between; min-height: 100%; padding: 1.15rem; overflow: hidden; border-right: 1px solid rgba(247, 244, 237, 0.26); background: #0e1b2b; }
+.nammanadu-signal::before { position: absolute; top: -16%; left: 47%; width: 1px; height: 132%; background: rgba(247, 244, 237, 0.2); content: ""; transform: rotate(26deg); }
+.nammanadu-signal span { position: relative; z-index: 1; color: #e6aa8f; font-family: "Newsreader", Georgia, serif; font-size: clamp(2rem, 3vw, 3.45rem); font-weight: 500; letter-spacing: -0.08em; }
+.nammanadu-signal i { position: relative; z-index: 1; width: 8px; height: 8px; margin-left: auto; border: 1px solid #e6aa8f; border-radius: 50%; }
+.nammanadu-signal i:nth-of-type(2) { margin-right: auto; margin-left: 0; background: #e6aa8f; }
+.nammanadu-content { padding: clamp(1.35rem, 3vw, 2.3rem); }
+.project-card-nammanadu h3 { color: var(--paper); font-size: clamp(2.2rem, 4.8vw, 4.75rem); }
+.project-card-nammanadu .project-index { color: #e6aa8f; }
+.project-type-active { border-color: rgba(230, 170, 143, 0.65); color: #fee3d3; }
+.nammanadu-lead { margin: clamp(2rem, 4vw, 3.8rem) 0 0.65rem; color: var(--paper); font-family: "Newsreader", Georgia, serif; font-size: clamp(1.45rem, 2.6vw, 2.25rem); font-weight: 500; letter-spacing: -0.032em; line-height: 1.04; }
+.project-card-nammanadu .project-summary { max-width: 800px; color: #c6d0d5; }
+.nammanadu-detail-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 0.34fr); gap: clamp(1.35rem, 4vw, 4.5rem); margin-top: 1.8rem; padding-top: 1rem; border-top: 1px solid rgba(247, 244, 237, 0.23); }
+.mini-label { margin: 0 0 0.65rem; color: #e6aa8f; font-size: 0.57rem; font-weight: 700; letter-spacing: 0.115em; text-transform: uppercase; }
+.capability-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.capability-tags span { padding: 0.4rem 0.5rem; border: 1px solid rgba(247, 244, 237, 0.26); color: #edf0ed; font-size: 0.69rem; line-height: 1.25; }
+.nammanadu-system { padding-left: 1.1rem; border-left: 1px solid rgba(247, 244, 237, 0.23); }
+.nammanadu-system p:last-child { margin: 0; color: #edf0ed; font-size: 0.76rem; font-weight: 600; line-height: 1.55; }
+.citizen-workflow { margin-top: 1.8rem; padding: 1rem; border: 1px solid rgba(247, 244, 237, 0.22); background: rgba(247, 244, 237, 0.045); }
+.citizen-workflow .mini-label { margin-bottom: 0.75rem; }
+.citizen-workflow ol { display: flex; flex-wrap: wrap; gap: 0.55rem 0; padding: 0; margin: 0; list-style: none; counter-reset: workflow; }
+.citizen-workflow li { display: inline-flex; align-items: center; color: #edf0ed; font-size: 0.7rem; font-weight: 600; }
+.citizen-workflow li:not(:last-child)::after { margin: 0 0.55rem; color: #e6aa8f; content: "→"; }
+.nammanadu-footer { border-color: rgba(247, 244, 237, 0.23); color: #c6d0d5; }
+.project-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.85rem; }
+.project-links a { display: inline-flex; align-items: center; gap: 0.34rem; color: var(--paper); transition: color 160ms var(--ease-out); }
+.project-links a:hover, .project-links a:focus-visible { color: #e6aa8f; }
 .project-card-head { display: flex; justify-content: space-between; gap: 1.5rem; }
 .project-index { margin-bottom: 0.55rem; color: var(--copper-dark); }
 .project-card h3, .experience-role h3, .achievement-row h3 { margin: 0; font-family: "Newsreader", Georgia, serif; font-size: clamp(1.65rem, 3vw, 2.6rem); font-weight: 500; letter-spacing: -0.035em; line-height: 1.02; }
@@ -228,6 +256,17 @@ h1 em { color: var(--copper); font-style: italic; }
 .experience-role ul { display: grid; gap: 0.75rem; max-width: 760px; padding: 0; margin: 0; list-style: none; }
 .experience-role li { position: relative; padding-left: 1rem; color: var(--ink-soft); font-size: 0.9rem; line-height: 1.55; }
 .experience-role li::before { position: absolute; top: 0.6em; left: 0; width: 4px; height: 4px; background: var(--copper); content: ""; }
+
+.volunteering { background: var(--paper); }
+.volunteer-record { display: grid; grid-template-columns: 115px minmax(0, 1fr); padding-left: 115px; }
+.volunteer-date { padding-top: 0.45rem; color: var(--copper-dark); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.11em; }
+.volunteer-role { padding: 0 0 0 2rem; border-left: 1px solid var(--line-strong); }
+.volunteer-role-title { display: flex; align-items: flex-start; gap: 0.9rem; }
+.volunteer-role-title > svg { flex: 0 0 auto; color: var(--copper); }
+.volunteer-role .eyebrow { margin-bottom: 0.45rem; }
+.volunteer-role h3 { margin: 0; font-family: "Newsreader", Georgia, serif; font-size: clamp(1.65rem, 3vw, 2.6rem); font-weight: 500; letter-spacing: -0.035em; line-height: 1.02; }
+.organisation-name { margin: 1rem 0 1.4rem; color: var(--ink-soft); font-size: 0.85rem; font-weight: 600; }
+.volunteer-description { max-width: 720px; margin: 0; color: var(--ink-soft); font-size: 0.9rem; line-height: 1.6; }
 
 .certifications { background: var(--paper); }
 .certification-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-left: 115px; border-top: 1px solid var(--line-strong); border-left: 1px solid var(--line-strong); }
@@ -297,6 +336,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper); outlin
   .profile-specs > div:nth-child(n + 3) { display: none; }
   .about-content, .project-stack, .skill-list { padding-left: 0; }
   .experience-record { padding-left: 0; }
+  .volunteer-record { padding-left: 0; }
   .certification-grid, .achievement-list { margin-left: 0; }
   .certification-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-inner { grid-template-columns: 1fr; gap: 2.7rem; }
@@ -323,11 +363,19 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper); outlin
   .skill-row { grid-template-columns: 1fr; gap: 0.9rem; }
   .project-grid { grid-template-columns: 1fr; }
   .project-card-secondary { grid-template-columns: 1fr; }
+  .project-card-nammanadu { grid-template-columns: 1fr; }
+  .nammanadu-signal { display: grid; grid-template-columns: auto repeat(3, 1fr); align-items: center; min-height: 68px; padding: 0.75rem 1rem; border-right: 0; border-bottom: 1px solid rgba(247, 244, 237, 0.26); }
+  .nammanadu-signal::before { top: -145%; left: 46%; height: 400%; }
+  .nammanadu-signal i { justify-self: end; margin: 0 !important; }
+  .nammanadu-detail-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .nammanadu-system { padding-top: 1.1rem; padding-left: 0; border-top: 1px solid rgba(247, 244, 237, 0.23); border-left: 0; }
   .project-visual { min-height: auto; }
   .project-visual::after { border-right: 0; border-bottom: 1px solid var(--line-strong); }
   .project-visual img { min-height: 240px; }
   .experience-record { grid-template-columns: 88px minmax(0, 1fr); }
   .experience-role { padding-left: 1.25rem; }
+  .volunteer-record { grid-template-columns: 88px minmax(0, 1fr); }
+  .volunteer-role { padding-left: 1.25rem; }
   .certification-grid { grid-template-columns: 1fr 1fr; }
   .certification-item { min-height: 135px; }
   .achievement-row { grid-template-columns: 1fr auto; gap: 0.55rem 1rem; }
@@ -350,6 +398,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper); outlin
   .project-type { order: -1; }
   .experience-record { grid-template-columns: 1fr; gap: 1rem; }
   .experience-role { padding: 1.1rem 0 0; border-top: 1px solid var(--line-strong); border-left: 0; }
+  .volunteer-record { grid-template-columns: 1fr; gap: 1rem; }
+  .volunteer-role { padding: 1.1rem 0 0; border-top: 1px solid var(--line-strong); border-left: 0; }
   .certification-grid { grid-template-columns: 1fr; }
   .contact-primary strong { font-size: 1.4rem; }
 }

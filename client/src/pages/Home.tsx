@@ -35,6 +35,7 @@ const navItems = [
   ["Skills", "#skills"],
   ["Projects", "#projects"],
   ["Experience", "#experience"],
+  ["Volunteering", "#volunteering"],
   ["Certifications", "#certifications"],
   ["Achievements", "#achievements"],
   ["Contact", "#contact"],
@@ -339,10 +340,77 @@ export default function Home() {
               description="A concise initial portfolio of project work. Each entry is structured to make room for deeper technical case studies as the work evolves."
             />
             <div className="project-stack">
+              <article className="project-card project-card-nammanadu">
+                <div className="nammanadu-signal" aria-hidden="true">
+                  <span>NM</span>
+                  <i />
+                  <i />
+                  <i />
+                </div>
+                <div className="nammanadu-content">
+                  <div className="project-card-head">
+                    <div>
+                      <p className="project-index">PROJECT / 01 · MAJOR ONGOING WORK</p>
+                      <h3>NAMMANADU</h3>
+                    </div>
+                    <span className="project-type project-type-active">Active development</span>
+                  </div>
+                  <p className="nammanadu-lead">AI-powered civic assistance and digital governance platform.</p>
+                  <p className="project-summary">
+                    NAMMANADU is focused on helping citizens access public services, report civic issues, submit complaints, track complaint resolution, explore government schemes, and interact with role-based government workflows. It is an ongoing project under active development, not a completed production government platform.
+                  </p>
+
+                  <div className="nammanadu-detail-grid">
+                    <div className="nammanadu-capabilities">
+                      <p className="mini-label">Current working application</p>
+                      <div className="capability-tags">
+                        <span>Citizen registration &amp; login</span>
+                        <span>Citizen dashboard</span>
+                        <span>Complaint creation &amp; submission</span>
+                        <span>Category &amp; priority</span>
+                        <span>District &amp; constituency</span>
+                        <span>Complaint tracking &amp; status</span>
+                        <span>Evidence / image support</span>
+                        <span>Government scheme exploration</span>
+                      </div>
+                    </div>
+                    <div className="nammanadu-system">
+                      <p className="mini-label">Application foundation</p>
+                      <p>Backend API integration · MongoDB database integration · Role-based application foundation</p>
+                    </div>
+                  </div>
+
+                  <div className="citizen-workflow" aria-label="Main citizen workflow">
+                    <p className="mini-label">Main citizen workflow</p>
+                    <ol>
+                      <li>Register</li>
+                      <li>Login</li>
+                      <li>Dashboard</li>
+                      <li>Create complaint</li>
+                      <li>Add details</li>
+                      <li>Submit</li>
+                      <li>Track complaint</li>
+                    </ol>
+                  </div>
+
+                  <footer className="project-footer nammanadu-footer">
+                    <span>Ongoing civic technology project</span>
+                    <div className="project-links">
+                      <a href="https://github.com/Mohansithaiya/NAMMANADU-Platform" target="_blank" rel="noreferrer">
+                        <Github size={15} aria-hidden="true" /> GitHub <ExternalIcon />
+                      </a>
+                      <a href="https://drive.google.com/file/d/1A7ZN4pO02bmKIiHWnH4Qnq63GvULh1SK/view?usp=sharing" target="_blank" rel="noreferrer">
+                        Demo <ExternalIcon />
+                      </a>
+                    </div>
+                  </footer>
+                </div>
+              </article>
+
               <article className="project-card project-card-primary">
                 <div className="project-card-head">
                   <div>
-                    <p className="project-index">PROJECT / 01</p>
+                    <p className="project-index">PROJECT / 02</p>
                     <h3>Smart Grocery Expiry Prediction &amp; Alert System</h3>
                   </div>
                   <span className="project-type">Applied AI</span>
@@ -383,7 +451,7 @@ export default function Home() {
                 <div className="project-secondary-content">
                   <div className="project-card-head">
                     <div>
-                      <p className="project-index">PROJECT / 02</p>
+                      <p className="project-index">PROJECT / 03</p>
                       <h3>InferChain — Verifiable AI Inference Platform</h3>
                     </div>
                     <span className="project-type">AI Systems</span>
@@ -429,10 +497,30 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="volunteering" className="volunteering section-anchor">
+          <div className="content-frame">
+            <SectionHeading index="05" eyebrow="Volunteering" title="Contributing to social welfare and college community activities." />
+            <article className="volunteer-record">
+              <div className="volunteer-date">Feb 2024 — Present</div>
+              <div className="volunteer-role">
+                <div className="volunteer-role-title">
+                  <BookOpen size={22} strokeWidth={1.6} aria-hidden="true" />
+                  <div>
+                    <p className="eyebrow">Social services</p>
+                    <h3>Volunteer</h3>
+                  </div>
+                </div>
+                <p className="organisation-name">National Service Scheme (NSS)</p>
+                <p className="volunteer-description">As an NSS volunteer, I actively contributed to various social welfare and college community activities.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
         <section id="certifications" className="certifications section-anchor">
           <div className="content-frame">
             <SectionHeading
-              index="05"
+              index="06"
               eyebrow="Certifications"
               title="Documented learning across data, machine vision, databases, and cyber security."
             />
@@ -450,7 +538,7 @@ export default function Home() {
 
         <section id="achievements" className="achievements section-anchor">
           <div className="content-frame">
-            <SectionHeading index="06" eyebrow="Achievements" title="A record of building, competing, and learning in public." />
+            <SectionHeading index="07" eyebrow="Achievements" title="A record of building, competing, and learning in public." />
             <div className="achievement-list">
               {achievements.map((achievement) => (
                 <article className="achievement-row" key={achievement.title}>
@@ -469,7 +557,7 @@ export default function Home() {
         <section id="contact" className="contact section-anchor">
           <div className="contact-inner">
             <div className="contact-copy">
-              <p className="eyebrow">07 / Contact</p>
+              <p className="eyebrow">08 / Contact</p>
               <h2>Let&apos;s build something thoughtful.</h2>
               <p>
                 I&apos;m always interested in conversations around AI/ML, software development, full-stack work, cloud computing, and meaningful engineering challenges.
