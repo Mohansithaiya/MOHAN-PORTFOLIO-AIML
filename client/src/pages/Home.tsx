@@ -371,7 +371,7 @@ export default function Home() {
                   <span>View featured project</span>
                   <ArrowDownRight size={17} aria-hidden="true" />
                 </a>
-                <a className="button button-secondary" href={resumeUrl} download="Mohan_S_Resume.pdf">
+                <a className="button button-secondary" href={resumeUrl} download="Mohan_S_Resume_AIML.pdf">
                   <span>Download résumé</span>
                   <ExternalIcon />
                 </a>
